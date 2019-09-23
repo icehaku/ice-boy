@@ -72,7 +72,7 @@ exports.run = () => {
             return
         }
 
-        if (msg.content.match(/\bmarrapais\b/i)) {
+        if (msg.content.match(/\b(marrapais|marrapas|marrapaz|marrapaiz)\b/i)) {
             msg.channel.send('http://i.imgur.com/rF2HBBz.png');
             return
         }

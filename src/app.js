@@ -1,7 +1,8 @@
 // Setando as variaveis de ambiente
 require('dotenv').config({path:__dirname+'/../.env'});
 
-import startDiscordBot from './bots/discord';
+const discordBot = require('./bots/discord');
 
-startDiscordBot.run();
-console.log('done');
+discordBot.run();
+
+//  pkill -f ice-boy

@@ -189,28 +189,28 @@ exports.run = () => {
         }
 
         if (msg.content.match(/\bapelidob\b/i)) {
-             msg.channel.send('Ei vocês sabiam que apelido dele é piroca?');
+            msg.channel.send('Ei vocês sabiam que apelido dele é piroca?');
         }
 
         if (msg.content.match(/\bLow Level\b/i)) {
-             msg.channel.send('Isso é coisa de low level ein');
+            msg.channel.send('Isso é coisa de low level ein');
         }
 
         if (msg.content.match(/\brachar\b/i)) {
-             msg.channel.send('Ei mah vamo rachar?');
+            msg.channel.send('Ei mah vamo rachar?');
         }
 
         if (msg.content.match(/\brepost\b/i)) {
-             msg.channel.send('https://www.youtube.com/watch?v=2F46tGehnfo');
+            msg.channel.send('https://www.youtube.com/watch?v=2F46tGehnfo');
         }
 
         if (msg.content.match(/\bindireta\b/i)) {
-             msg.channel.send('peixonauta é uma indireta');
+            msg.channel.send('peixonauta é uma indireta');
         }
 
 
         if (msg.content.match(/\bhots\b/i)) {
-             msg.channel.send('Pfii que jogo tosco');
+            msg.channel.send('Pfii que jogo tosco');
         }
     });
     //MEMESSAGES DISCORDTHUR END

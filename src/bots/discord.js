@@ -129,7 +129,7 @@ exports.run = () => {
     //MEMESSAGES DISCORDTHUR
     client.on('message', (msg) => {
         if (msg.author.id === '501914119952138250') { return }
-        if (msg.channel.id != '581125008781213732') { return }
+        if (msg.channel.id != '503540635232370688') { return }
 
         // if (msg.content.match(/\bping\b/i)) {
         //      msg.channel.send('Pong! Message!');g

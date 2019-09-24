@@ -129,7 +129,7 @@ exports.run = () => {
     //MEMESSAGES DISCORDTHUR
     client.on('message', (msg) => {
         if (msg.author.id === '501914119952138250') { return }
-        if (msg.channel.id != '503540635232370688') { return }
+        if (msg.guild.id != '426072245538914307') { return }
 
         // if (msg.content.match(/\bping\b/i)) {
         //      msg.channel.send('Pong! Message!');g
@@ -145,7 +145,14 @@ exports.run = () => {
                 'Você por acaso já leu algo Pr.Olavo?',
                 'Não é nepotismo é mérito!',
                 'Liberal na economia, conservador nos costumes!',
-                'E o Lula? e o PT! https://media.tenor.com/images/57d33351336138309605d34778e77590/tenor.gif'
+                'E o Lula? e o PT! https://media.tenor.com/images/57d33351336138309605d34778e77590/tenor.gif',
+                'Brasil acima de tudo, Deus acima de todos!!!',
+                'Brazil. Visit and love us!',
+                'Culpa do PT!',
+                'Culpa do Lula!',
+                'Culpa da Dilma!',
+                'Culpa dos Indios!',
+                'Culpa das ONGs!'
             ]);
             msg.channel.send(passa_pano);
             return

@@ -135,7 +135,7 @@ exports.run = () => {
         //      msg.channel.send('Pong! Message!');g
         // }
 
-        if (msg.content.match(/\b(minion|minions|bolsominion|bolsominions|bozo|bolso|bolsonaro)\b/i)) {
+        if (msg.content.match(/\b(minion|minions|bolsominion|bolsominions|bozo|bolso|bolsonaro|bozonaro)\b/i)) {
             msg.channel.send('https://i.ibb.co/dDNSMvr/image.png');
             let passa_pano= randomItem([
                 'Deixa o homen trabalhar!!!',

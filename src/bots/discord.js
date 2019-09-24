@@ -149,15 +149,15 @@ exports.run = () => {
         }
 
         if (msg.content.match(/\bTop Secret?\b/i)) {
-             msg.channel.send('DIsso é top secret cara, conta pra ninguém não!');
+             msg.channel.send('Isso é top secret cara, conta pra ninguém não!');
         }
 
         if (msg.content.match(/\b(Cidadão|cidadao)?\b/i)) {
-             msg.channel.send('DIsso é top secret cara, conta pra ninguém não!');
+             msg.channel.send('Olha ai Karlos o Cidadão!');
         }
 
         if (msg.content.match(/\b(teste|testa)?\b/i)) {
-             msg.channel.send('DIsso é top secret cara, conta pra ninguém não!');
+             msg.channel.send('Testa ai agora!');
         }
 
         if (msg.content.match(/\btchau?\b/i)) {
@@ -207,7 +207,6 @@ exports.run = () => {
         if (msg.content.match(/\bindireta\b/i)) {
             msg.channel.send('peixonauta é uma indireta');
         }
-
 
         if (msg.content.match(/\bhots\b/i)) {
             msg.channel.send('Pfii que jogo tosco');

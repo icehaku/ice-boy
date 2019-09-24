@@ -2,6 +2,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const GetSafe = require ('get-safe');
+const randomItem = require('random-item');
 
 //Ice-Bot_id: '501914119952138250'
 //discordthur: 426072245538914307
@@ -128,14 +129,25 @@ exports.run = () => {
     //MEMESSAGES DISCORDTHUR
     client.on('message', (msg) => {
         if (msg.author.id === '501914119952138250') { return }
-        if (msg.channel.id != '503540635232370688') { return }
+        if (msg.channel.id != '581125008781213732') { return }
 
         // if (msg.content.match(/\bping\b/i)) {
         //      msg.channel.send('Pong! Message!');g
         // }
 
-        if (msg.content.match(/\b(minion|minions|bolsominion|bolsominions)\b/i)) {
+        if (msg.content.match(/\b(minion|minions|bolsominion|bolsominions|bozo|bolso|bolsonaro)\b/i)) {
             msg.channel.send('https://i.ibb.co/dDNSMvr/image.png');
+            let passa_pano= randomItem([
+                'Deixa o homen trabalhar!!!',
+                'Não foi isso que ele quis dizer!!!',
+                'Revolução Militar, não golpe!!!',
+                'Culpa das ONGs!!!',
+                'Você por acaso já leu algo Pr.Olavo?',
+                'Não é nepotismo é mérito!',
+                'Liberal na economia, conservador nos costumes!',
+                'E o Lula? e o PT! https://media.tenor.com/images/57d33351336138309605d34778e77590/tenor.gif'
+            ]);
+            msg.channel.send(passa_pano);
             return
         }
 
@@ -144,36 +156,36 @@ exports.run = () => {
             return
         }
 
-        if (msg.content.match(/\bDa pra fazer?\b/i)) {
+        if (msg.content.match(/\bDa pra fazer\b/i)) {
             msg.channel.send('Dá demais!');
             return
         }
 
-        if (msg.content.match(/\bTop Secret?\b/i)) {
+        if (msg.content.match(/\bTop Secret\b/i)) {
             msg.channel.send('Isso é top secret cara, conta pra ninguém não!');
             return
         }
 
-        if (msg.content.match(/\b(Cidadão|cidadao)?\b/i)) {
+        if (msg.content.match(/\b(Cidadão|cidadao)\b/i)) {
             msg.channel.send('Olha ai Karlos o Cidadão!');
             return
         }
 
-        if (msg.content.match(/\b(teste|testa)?\b/i)) {
+        if (msg.content.match(/\b(teste|testa)\b/i)) {
             msg.channel.send('Testa ai agora!');
             return
         }
 
-        if (msg.content.match(/\btchau?\b/i)) {
+        if (msg.content.match(/\btchau\b/i)) {
             msg.channel.send('tchaupatau!');
             return
         }
 
-        if (msg.content.match(/\bskills?\b/i)) {
+        if (msg.content.match(/\bskills\b/i)) {
             msg.channel.send('tá duvidando das minhas skills?');
         }
 
-        if (msg.content.match(/\bGanhei?\b/i)) {
+        if (msg.content.match(/\bGanhei\b/i)) {
             msg.channel.send('Eu ganhei foi???');
             return
         }
@@ -183,7 +195,7 @@ exports.run = () => {
             return
         }
 
-        if (msg.content.match(/\bIPS?\b/i)) {
+        if (msg.content.match(/\bIPS\b/i)) {
             msg.channel.send('Karlos é que nem um laser, ele mira e atira.');
             return
         }
@@ -198,7 +210,7 @@ exports.run = () => {
             return
         }
 
-        if (msg.content.match(/\bapelidob\b/i)) {
+        if (msg.content.match(/\bapelido\b/i)) {
             msg.channel.send('Ei vocês sabiam que apelido dele é piroca?');
             return
         }

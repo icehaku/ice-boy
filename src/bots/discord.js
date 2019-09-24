@@ -145,71 +145,87 @@ exports.run = () => {
         }
 
         if (msg.content.match(/\bDa pra fazer?\b/i)) {
-             msg.channel.send('Dá demais!');
+            msg.channel.send('Dá demais!');
+            return
         }
 
         if (msg.content.match(/\bTop Secret?\b/i)) {
-             msg.channel.send('Isso é top secret cara, conta pra ninguém não!');
+            msg.channel.send('Isso é top secret cara, conta pra ninguém não!');
+            return
         }
 
         if (msg.content.match(/\b(Cidadão|cidadao)?\b/i)) {
-             msg.channel.send('Olha ai Karlos o Cidadão!');
+            msg.channel.send('Olha ai Karlos o Cidadão!');
+            return
         }
 
         if (msg.content.match(/\b(teste|testa)?\b/i)) {
-             msg.channel.send('Testa ai agora!');
+            msg.channel.send('Testa ai agora!');
+            return
         }
 
         if (msg.content.match(/\btchau?\b/i)) {
-             msg.channel.send('tchaupatau!');
+            msg.channel.send('tchaupatau!');
+            return
         }
 
         if (msg.content.match(/\bskills?\b/i)) {
-             msg.channel.send('tá duvidando das minhas skills?');
+            msg.channel.send('tá duvidando das minhas skills?');
         }
 
         if (msg.content.match(/\bGanhei?\b/i)) {
-             msg.channel.send('Eu ganhei foi???');
+            msg.channel.send('Eu ganhei foi???');
+            return
         }
 
         if (msg.content.match(/\bTosco\b/i)) {
-             msg.channel.send('Olha ai Karlos que tosco');
+            msg.channel.send('Olha ai Karlos que tosco');
+            return
         }
 
         if (msg.content.match(/\bIPS?\b/i)) {
-             msg.channel.send('Karlos é que nem um laser, ele mira e atira.');
+            msg.channel.send('Karlos é que nem um laser, ele mira e atira.');
+            return
         }
 
         if (msg.content.match(/\b(xuas punk|punk)\b/i)) {
-             msg.channel.send('Ele é punk mesmo');
+            msg.channel.send('Ele é punk mesmo');
+            return
         }
 
         if (msg.content.match(/\bStephen\b/i)) {
-             msg.channel.send('Ei o Stephen é bom mesmo?');
+            msg.channel.send('Ei o Stephen é bom mesmo?');
+            return
         }
 
         if (msg.content.match(/\bapelidob\b/i)) {
             msg.channel.send('Ei vocês sabiam que apelido dele é piroca?');
+            return
         }
 
         if (msg.content.match(/\bLow Level\b/i)) {
             msg.channel.send('Isso é coisa de low level ein');
+            return
         }
 
         if (msg.content.match(/\brachar\b/i)) {
             msg.channel.send('Ei mah vamo rachar?');
+            return
         }
 
         if (msg.content.match(/\brepost\b/i)) {
             msg.channel.send('https://www.youtube.com/watch?v=2F46tGehnfo');
+            return
         }
 
         if (msg.content.match(/\bindireta\b/i)) {
             msg.channel.send('peixonauta é uma indireta');
+            return
         }
 
         if (msg.content.match(/\bhots\b/i)) {
             msg.channel.send('Pfii que jogo tosco');
+            return
         }
     });
     //MEMESSAGES DISCORDTHUR END

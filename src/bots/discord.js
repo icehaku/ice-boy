@@ -7,6 +7,7 @@ const GetSafe = require ('get-safe');
 //discordthur: 426072245538914307
 //msg.reply
 //msg.channel.send
+//IceDomain: 469482024642674688
 
 const isDiscordBot = (msg) => {
     let firstMentionId = GetSafe('mentions.members.first().id', msg, 'nope')
@@ -28,7 +29,7 @@ exports.run = () => {
         // }
     });
 
-    //MEMESSAGES
+    //MEMESSAGES SHARED
     client.on('message', (msg) => {
         if (msg.author.id === '501914119952138250') { return }
 
@@ -97,13 +98,6 @@ exports.run = () => {
             return
         }
 
-        if (msg.content.match(/\b(minion|minions|bolsominion|bolsominions)\b/i)) {
-            if (msg.channel.id != '426072245538914307') { return }
-
-            msg.channel.send('https://i.ibb.co/dDNSMvr/image.png');
-            return
-        }
-
         if (msg.content.match(/\b(já morreu|ja morreu)\b/i)) {
             msg.channel.send('http://i.imgur.com/kn6bR1U.png');
             return
@@ -129,6 +123,109 @@ exports.run = () => {
             return
         }
     });
+    //MEMESSAGES SHARED END
+
+    //MEMESSAGES DISCORDTHUR
+    client.on('message', (msg) => {
+        if (msg.author.id === '501914119952138250') { return }
+        if (msg.channel.id != '426072245538914307') { return }
+
+        // if (msg.content.match(/\bping\b/i)) {
+        //      msg.channel.send('Pong! Message!');g
+        // }
+
+        if (msg.content.match(/\b(minion|minions|bolsominion|bolsominions)\b/i)) {
+            msg.channel.send('https://i.ibb.co/dDNSMvr/image.png');
+            return
+        }
+
+        if (msg.content.match(/\b(xora bixão|chora bixão|chora bixao|chora bixaum|chora bichão|chora bixao)\b/i)) {
+            msg.channel.send('Eu sei que tu chora, chora ai :clap: :clap: :clap:');
+            return
+        }
+
+        if (msg.content.match(/\bDa pra fazer?\b/i)) {
+             msg.channel.send('Dá demais!');
+        }
+
+        if (msg.content.match(/\bTop Secret?\b/i)) {
+             msg.channel.send('DIsso é top secret cara, conta pra ninguém não!');
+        }
+
+        if (msg.content.match(/\b(Cidadão|cidadao)?\b/i)) {
+             msg.channel.send('DIsso é top secret cara, conta pra ninguém não!');
+        }
+
+        if (msg.content.match(/\b(teste|testa)?\b/i)) {
+             msg.channel.send('DIsso é top secret cara, conta pra ninguém não!');
+        }
+
+        if (msg.content.match(/\btchau?\b/i)) {
+             msg.channel.send('tchaupatau!');
+        }
+
+        if (msg.content.match(/\bskills?\b/i)) {
+             msg.channel.send('tá duvidando das minhas skills?');
+        }
+
+        if (msg.content.match(/\bGanhei?\b/i)) {
+             msg.channel.send('Eu ganhei foi???');
+        }
+
+        if (msg.content.match(/\bTosco\b/i)) {
+             msg.channel.send('Olha ai Karlos que tosco');
+        }
+
+        if (msg.content.match(/\bIPS?\b/i)) {
+             msg.channel.send('Karlos é que nem um laser, ele mira e atira.');
+        }
+
+        if (msg.content.match(/\b(xuas punk|punk)\b/i)) {
+             msg.channel.send('Ele é punk mesmo');
+        }
+
+        if (msg.content.match(/\bStephen\b/i)) {
+             msg.channel.send('Ei o Stephen é bom mesmo?');
+        }
+
+        if (msg.content.match(/\bapelidob\b/i)) {
+             msg.channel.send('Ei vocês sabiam que apelido dele é piroca?');
+        }
+
+        if (msg.content.match(/\bLow Level\b/i)) {
+             msg.channel.send('Isso é coisa de low level ein');
+        }
+
+        if (msg.content.match(/\brachar\b/i)) {
+             msg.channel.send('Ei mah vamo rachar?');
+        }
+
+        if (msg.content.match(/\brepost\b/i)) {
+             msg.channel.send('https://www.youtube.com/watch?v=2F46tGehnfo');
+        }
+
+        if (msg.content.match(/\bindireta\b/i)) {
+             msg.channel.send('peixonauta é uma indireta');
+        }
+
+
+        if (msg.content.match(/\bhots\b/i)) {
+             msg.channel.send('Pfii que jogo tosco');
+        }
+    });
+    //MEMESSAGES DISCORDTHUR END
+
+    //MEMESSAGES MIGUXOS
+    client.on('message', (msg) => {
+        if (msg.author.id === '501914119952138250') { return }
+        if (msg.channel.id != '111701169704841216') { return }
+
+        // if (msg.content.match(/\bping\b/i)) {
+        //      msg.channel.send('Pong! Message!');
+        // }
+
+    });
+    //MEMESSAGES MIGUXOS END
 
     client.login(process.env.DISCORD_BOT_TOKEN)
         .then((result) => {
@@ -139,103 +236,58 @@ exports.run = () => {
         });
 }
 
-// module.exports = { run };
+// command(:fortcoming) do |event|
+//   return unless event.channel.id == 551048576277545000
+//   url = "https://fortnite-public-api.theapinetwork.com/prod09/upcoming/get"
+//   result = HTTParty.get(url).body
+//   result = JSON.parse(result)
 
-    // message(contains: textAnySize("mundo da voltas")) do |event|
-    //   event.respond "https://imgur.com/a/nWQhHAZ"
-    // end
+//   if result["error"].present?
+//     event.respond result["errorMessage"]
+//   else
+//     begin
+//       result["items"].each do |item|
+//         event.respond item["item"]["images"]["information"]
+//       end
+//     rescue Exception => erro
+//       event.respond "EEEEETA PORRA, deu erro aqui, avisa ao mestre ice o erro é esse: "+erro.message
+//     end
+//   end
+// end  #end command fortcoming
 
-    // message(contains: textAnySize("jogo virou")) do |event|
-    //   event.respond "https://imgur.com/a/GamGTH8"
-    // end
 
-    // message(contains: textAnySize("pikachuo")) do |event|
-    //   event.respond "https://imgur.com/a/qWmxO4M"
-    // end
+// #fortnite store channel: 551048576277545000
+// #bot-debug : 503762979112615937
+// command(:fortstore) do |event|
+//   return unless event.channel.id == 551048576277545000
+//   url = "https://fortnite-public-api.theapinetwork.com/prod09/store/get?language=en"
+//   result = HTTParty.get(url).body
+//   result = JSON.parse(result)
 
-    // message(contains: textAnySize("triste")) do |event|
-    //   event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
-    // end
+//   if result["error"].present?
+//     event.respond result["errorMessage"]
+//   else
+//     event.respond "PREPARA A CARTEIRA ARROMBADO!!!11"
+//     result["items"].each do |item|
+//       # VIA SEND IMAGE
+//       # image_url  = item["item"]["images"]["information"] rescue nil
+//       # image_name = "#{item["name"]}.png" rescue "temp.png"
+//       # if image_url.present?
+//       #   open(image_name, 'wb') do |local_file|
+//       #     local_file << open(image_url).read
+//       #     $bot.send_file(event.channel.id, File.open(local_file.path,'r'))
+//       #     File.delete(local_file.path) if File.exist?(local_file.path)
+//       #   end
+//       # end
 
-    // message(contains: textAnySize(" sad ")) do |event|
-    //   event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
-    // end
-
-    // message(contains: textAnySize("tururu")) do |event|
-    //   event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
-    // end
-
-    // message(contains: textAnySize("pare")) do |event|
-    //   event.respond "https://imgur.com/a/KTywwYA"
-    // end
-
-    // message(contains: textAnySize("gloria")) do |event|
-    //   event.respond "Gloria a DEUXXSSSS"
-    // end
-
-    // message(contains: textAnySize("kkk")) do |event|
-    //   event.respond "eae man kkk"
-    // end
-
-    // message(contains: textAnySize("eomegalule")) do |event|
-    //   event.respond "https://i.imgur.com/jYtfRix.jpg"
-    // end
-
-    // message(contains: textAnySize("um momento")) do |event|
-    //   event.respond "https://imgur.com/a/pRBvmkR"
-    // end
-
-    // message(contains: textAnySize("ta safe")) do |event|
-    //   event.respond "ta safe neh? https://i.imgur.com/54IxgZb.png"
-    // end
-
-    // message(contains: textAnySize("marrapais")) do |event|
-    //   event.respond "http://i.imgur.com/rF2HBBz.png"
-    // end
-
-    // message(contains: textAnySize("plantão")) do |event|
-    //   event.respond "https://www.youtube.com/watch?v=7DYomde2YEc"
-    // end
-
-    // message(contains: textAnySize("plantao")) do |event|
-    //   event.respond "https://www.youtube.com/watch?v=7DYomde2YEc"
-    // end
-
-    // message(contains: textAnySize("hacker")) do |event|
-    //   event.respond "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQebfDHU5W9dp59HyP8A9lTV7mcQKstZ5UZy_Zf-IM8bhCtsDnQ2Q"
-    // end
-
-    // message(contains: textAnySize("hackerman")) do |event|
-    //   event.respond "https://i.kym-cdn.com/photos/images/newsfeed/001/176/251/4d7.png"
-    // end
-
-    // message(contains: textAnySize("já morreu")) do |event|
-    //   event.respond "http://i.imgur.com/kn6bR1U.png"
-    // end
-
-    // message(contains: textAnySize("ja morreu")) do |event|
-    //   event.respond "http://i.imgur.com/kn6bR1U.png"
-    // end
-
-    // message(contains: textAnySize("vai da merda")) do |event|
-    //   event.respond "https://youtu.be/c5ZRjdlLMEM"
-    // end
-
-    // message(contains: textAnySize("84 anos")) do |event|
-    //   event.respond "https://imgur.com/a/KEPiJ4N"
-    // end
-
-    // message(contains: textAnySize("já fazem")) do |event|
-    //   event.respond "https://imgur.com/a/KEPiJ4N"
-    // end
-
-    // message(contains: textAnySize("briguem")) do |event|
-    //   event.respond "https://imgur.com/a/KbZRKds"
-    // end
-
-    // message(contains: textAnySize("como eu sou bonito")) do |event|
-    //   event.respond "https://www.youtube.com/watch?v=lL_c7AZLxgM"
-    //   event.respond "Meus deus todo poderoso, como eu sou bonito, como sou forte."
-    //   event.respond "Sim mais do que qualquer outra coisa da terra, a lua, as estrelas o sol brilhante, sao insignificantes diantes de mim."
-    //   event.respond " Nada eh mais bonito que eu."
-    // end
+//       #VIA URL SECA
+//       begin
+//         images = ""
+//         images += item["item"]["images"]["information"]+"\n" if item["item"]["images"]["information"].present?
+//         images += item["youtube"]+"\n" if item["youtube"].present?
+//         event.respond images
+//       rescue; end
+//     end
+//     event.respond "POR HOJE É SÓ MIA JOIA!"
+//   end
+// end #end command fortstore
